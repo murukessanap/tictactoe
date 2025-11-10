@@ -105,7 +105,7 @@ def V(Sc,k):
         Sd=copy.deepcopy(Sc)
         Sd[i][j]=k
         
-        val=E(Sd,k)+0.8*sum([p*vl[m] for m in range(len(vl))])
+        val=p*(E(Sd,k)+0.8*sum(vl))
         if val>max_val:
             max_val=val
             max_a=i,j
@@ -156,3 +156,5 @@ def main():
 
 
 main()
+
+#emptyBV()
